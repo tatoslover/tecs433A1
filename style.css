@@ -1211,10 +1211,14 @@ details.hint-details[open] summary { margin-bottom: 0.4rem; }
   .answer-row-label { font-weight: 600; }
 
   /* Area model: wipe cell colours, keep grid lines */
-  .area-model { print-color-adjust: exact; -webkit-print-color-adjust: exact;
-                background: #aaa !important; }
-  .area-model .cell,
-  .cell-light, .cell-dark { background: white !important; }
+  /* Interactive area models: wipe colours (students shade themselves) */
+  .area-model:not(.static-model) { print-color-adjust: exact; -webkit-print-color-adjust: exact;
+                                    background: #aaa !important; }
+  .area-model:not(.static-model) .cell { background: white !important; }
+
+  /* Static diagrams: preserve shading */
+  .static-model { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+  .static-model .cell-light, .static-model .cell-dark { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
 
   /* Fraction bar: wipe cell colours, keep section borders */
   .fb-bar-wrap { margin: 0.6rem 0; }
