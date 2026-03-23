@@ -1015,9 +1015,44 @@ details.hint-details[open] summary { margin-bottom: 0.4rem; }
 .sheet.lesson2 .print-btn { color: var(--lesson2); border: 1px solid var(--lesson2-mid); }
 .sheet.support  .print-btn { color: var(--support);  border: 1px solid #d2b4de; }
 
-/* ── Print-only elements (hidden on screen, visible in print) ── */
+/* ── Print-only / screen-only toggles ── */
 .print-only { display: none; }
 @media print { .print-only { display: block; } }
+@media print { .screen-only { display: none !important; } }
+
+/* ── Static print fraction bars (Sheet 3) ── */
+.print-fb { display: none; }
+@media print { .print-fb { display: block; margin-top: 0.5rem; } }
+
+.print-fb-label {
+  font-size: 0.85rem;
+  margin: 0.5rem 0 0.2rem;
+}
+.print-fb-bar {
+  display: flex;
+  width: 100%;
+  border: 1.5px solid #555;
+  margin: 0.2rem 0 0.5rem;
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+}
+.print-fb-cell {
+  flex: 1;
+  min-height: 42px;
+  border-right: 1px solid #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  color: #333;
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+}
+.print-fb-cell:last-child { border-right: none; }
+.print-fb-cell.pfb-sep { border-right: 2px solid #555; }
+.print-fb-cell.pfb-light { background: #f5b7b1 !important; }
+.print-fb-cell.pfb-dark  { background: #c0392b !important; color: white !important; }
+.print-fb-result { font-size: 0.88rem; margin-top: 0.25rem; }
 
 /* ── Print / Save as PDF styles ── */
 @media print {
