@@ -1077,9 +1077,12 @@ details.hint-details[open] summary { margin-bottom: 0.4rem; }
   details.hint-details,
   .explore-options { display: none !important; }
 
+  /* Full-width layout */
+  main { max-width: 100% !important; padding: 0 !important; margin: 0 !important; }
+
   /* Sheet card → flat page */
   .sheet { border: none !important; box-shadow: none !important;
-           border-radius: 0 !important; margin: 0 !important; }
+           border-radius: 0 !important; margin: 0 !important; width: 100% !important; }
   .sheet-header { print-color-adjust: exact; -webkit-print-color-adjust: exact;
                   padding: 0.5rem 1rem !important; }
   .sheet-body { padding: 0.5rem 0 !important; max-width: 100% !important; }
