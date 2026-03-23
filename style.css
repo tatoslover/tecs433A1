@@ -123,6 +123,105 @@ main {
   margin-bottom: 2rem;
 }
 
+/* ── Worked Example Reference Strip ── */
+.reference-strip {
+  border: 1.5px solid #d2b4de;
+  border-left: 4px solid var(--support);
+  border-radius: var(--radius);
+  background: var(--support-light);
+  padding: 0.9rem 1.1rem;
+  margin-bottom: 1.25rem;
+}
+.reference-strip-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--support);
+  margin-bottom: 0.4rem;
+}
+.reference-strip-problem {
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+}
+.reference-strip-steps {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.6rem;
+}
+.ref-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  background: white;
+  border: 1px solid #d2b4de;
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.88rem;
+  flex: 1;
+  min-width: 160px;
+}
+.ref-step-num {
+  background: var(--support);
+  color: white;
+  font-weight: 700;
+  font-size: 0.8rem;
+  width: 1.4em;
+  height: 1.4em;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.ref-step-arrow {
+  color: var(--support);
+  font-size: 1.2rem;
+  padding-top: 0.5rem;
+  flex-shrink: 0;
+}
+.reference-strip-note {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* ── Karakia ── */
+.karakia-box {
+  border: 1px solid var(--overview-mid);
+  border-radius: var(--radius);
+  background: var(--overview-light);
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.5rem;
+}
+.karakia-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--overview);
+  margin-bottom: 0.6rem;
+}
+.karakia-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+.karakia-maori {
+  font-style: italic;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--text);
+}
+.karakia-english {
+  font-size: 0.88rem;
+  line-height: 1.8;
+  color: var(--text-muted);
+}
+
 .objectives {
   background: #fafaf8;
   border-left: 4px solid var(--lesson1);
